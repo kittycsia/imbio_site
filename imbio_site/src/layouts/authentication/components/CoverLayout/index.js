@@ -1,13 +1,13 @@
-// prop-types is a library for typechecking of props
+// Prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 React components
+// Components
 import MDBox from "components/MDBox";
 
-// Material Dashboard 2 React example components
+// Example components
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication layout components

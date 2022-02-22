@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 
-// Material Dashboard 2 React components
+// Components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Dashboard 2 React base styles
+// Base Styles
 import typography from "assets/theme/base/typography";
 
 function Footer({ light }) {

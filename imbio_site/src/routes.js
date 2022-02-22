@@ -1,9 +1,9 @@
-// Material Dashboard 2 React layouts
+// Layouts
 import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
-import Billing from "layouts/billing";
+/* import Tables from "layouts/tables"; */
+/* import Billing from "layouts/billing"; */
 import Notifications from "layouts/notifications";
-import Profile from "layouts/profile";
+/* import Profile from "layouts/profile"; */
 import SignIn from "layouts/authentication/sign-in";
 import ResetPassword from "layouts/authentication/reset-password";
 
@@ -22,26 +22,26 @@ const routes = [
   {
     type: "collapse",
     name: "Algorithms",
-    key: "tables",
+    key: "dashboard",
     icon: <Icon fontSize="small">settings_suggest</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    route: "/dashboard",
+    component: <Dashboard />,
   },
   {
     type: "collapse",
     name: "Profiles",
-    key: "profile",
+    key: "dashboard",
     icon: <Icon fontSize="small">engineering</Icon>,
-    route: "/profile",
-    component: <Profile />,
+    route: "/dashboard",
+    component: <Dashboard />,
   },
   {
     type: "collapse",
     name: "Roles",
-    key: "billing",
+    key: "dashboard",
     icon: <Icon fontSize="small">manage_accounts</Icon>,
-    route: "/billing",
-    component: <Billing />,
+    route: "/dashboard",
+    component: <Dashboard />,
   },
   {
     type: "collapse",

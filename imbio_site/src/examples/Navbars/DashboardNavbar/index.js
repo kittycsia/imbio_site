@@ -12,10 +12,10 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 React components
+// Components
 import MDBox from "components/MDBox";
 
-// Material Dashboard 2 React example components
+// Example components
 import Breadcrumbs from "examples/Breadcrumbs";
 
 // Custom styles for DashboardNavbar
@@ -27,7 +27,7 @@ import {
   navbarMobileMenu,
 } from "examples/Navbars/DashboardNavbar/styles";
 
-// Material Dashboard 2 React context
+// Context
 import {
   useMaterialUIController,
   setTransparentNavbar,
