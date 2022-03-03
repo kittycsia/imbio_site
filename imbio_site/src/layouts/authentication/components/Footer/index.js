@@ -59,7 +59,7 @@ function Footer({ light }) {
             })}
           >
             <MDBox component="li" px={2} lineHeight={1}>
-              <Link href="https://www.imbio.com/" target="_blank">
+              <Link href="https://www.imbio.com/about-imbio/" target="_blank">
                 <MDTypography
                   variant="button"
                   fontWeight="regular"

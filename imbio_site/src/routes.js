@@ -1,6 +1,6 @@
 // Layouts
 import Dashboard from "layouts/dashboard";
-/* import Tables from "layouts/tables"; */
+import Tables from "layouts/tables";
 /* import Billing from "layouts/billing"; */
 import Notifications from "layouts/notifications";
 /* import Profile from "layouts/profile"; */
@@ -14,10 +14,10 @@ const routes = [
   {
     type: "collapse",
     name: "Jobs",
-    key: "dashboard",
+    key: "tables",
     icon: <Icon fontSize="small">fact_check</Icon>,
-    route: "/dashboard",
-    component: <Dashboard />,
+    route: "/tables",
+    component: <Tables />,
   },
   {
     type: "collapse",
