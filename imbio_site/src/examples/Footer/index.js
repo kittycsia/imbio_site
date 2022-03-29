@@ -77,10 +77,7 @@ function Footer({ company, links }) {
 // Setting default values for the props of Footer
 Footer.defaultProps = {
   company: { href: "https://www.imbio.com/", name: "Imbio" },
-  links: [
-    { href: "https://www.imbio.com/about-imbio/", name: "About Us" },
-    { href: "https://www.imbio.com/support/", name: "Need help?" },
-  ],
+  links: [{ href: "https://www.imbio.com/about-imbio/", name: "About Us" }],
 };
 
 // Typechecking props for the Footer

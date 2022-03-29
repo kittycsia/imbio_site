@@ -1,9 +1,8 @@
 // Layouts
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
-/* import Billing from "layouts/billing"; */
 import Notifications from "layouts/notifications";
-/* import Profile from "layouts/profile"; */
+import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import ResetPassword from "layouts/authentication/reset-password";
 
@@ -30,10 +29,10 @@ const routes = [
   {
     type: "collapse",
     name: "Profiles",
-    key: "dashboard",
+    key: "profile",
     icon: <Icon fontSize="small">engineering</Icon>,
-    route: "/dashboard",
-    component: <Dashboard />,
+    route: "/profile",
+    component: <Profile />,
   },
   {
     type: "collapse",

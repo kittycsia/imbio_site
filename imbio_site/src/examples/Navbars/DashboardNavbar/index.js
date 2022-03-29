@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 
-// react-router components
-import { useLocation, Link } from "react-router-dom";
-
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
@@ -34,6 +31,8 @@ import {
   setMiniSidenav,
   setOpenConfigurator,
 } from "context";
+import { useLocation } from "react-router-dom";
+import MDTypography from "../../../components/MDTypography";
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
@@ -108,20 +107,34 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 </Icon>
               </IconButton>
 
-              <Link to="sign-in">
-                <IconButton sx={navbarIconButton} size="small" disableRipple>
-                  <Icon sx={iconsStyle}>support_agent</Icon>
-                </IconButton>
-              </Link>
+              <IconButton sx={navbarIconButton} size="medium" disableRipple>
+                <Icon sx={iconsStyle}>support_agent</Icon>
+                <MDTypography
+                  component="a"
+                  href="https://www.imbio.com/support/"
+                  variant="caption"
+                  color="dark"
+                  fontWeight="medium"
+                >
+                  SUPPORT
+                </MDTypography>
+              </IconButton>
 
-              <Link to="sign-up">
-                <IconButton sx={navbarIconButton} size="small" disableRipple>
-                  <Icon sx={iconsStyle}>assignment</Icon>
-                </IconButton>
-              </Link>
+              <IconButton sx={navbarIconButton} size="medium" disableRipple>
+                <Icon sx={iconsStyle}>assignment</Icon>
+              </IconButton>
+              <MDTypography
+                component="a"
+                href="#"
+                variant="caption"
+                color="dark"
+                fontWeight="medium"
+              >
+                DOCS
+              </MDTypography>
 
               <IconButton
-                size="small"
+                size="large"
                 disableRipple
                 color="inherit"
                 sx={navbarIconButton}
@@ -129,6 +142,15 @@ function DashboardNavbar({ absolute, light, isMini }) {
               >
                 <Icon sx={iconsStyle}>account_circle</Icon>
               </IconButton>
+              <MDTypography
+                component="a"
+                href="#"
+                variant="caption"
+                color="dark"
+                fontWeight="medium"
+              >
+                PROFILE
+              </MDTypography>
             </MDBox>
           </MDBox>
         )}

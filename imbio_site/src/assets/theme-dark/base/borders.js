@@ -1,9 +1,3 @@
-/**
- * The base border styles for the Material Dashboard 2 PRO React.
- * You can add new border width, border color or border radius using this file.
- * You can customize the borders value for the entire Material Dashboard 2 PRO React using the file.
- */
-
 // Base Styles
 import colors from "assets/theme-dark/base/colors";
 

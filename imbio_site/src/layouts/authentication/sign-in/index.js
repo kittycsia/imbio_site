@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
 
 // Components
 import MDBox from "components/MDBox";
@@ -21,10 +20,8 @@ import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 import logo from "assets/images/logo.png";
 
 function Basic() {
+  // eslint-disable-next-line no-unused-vars
   const [rememberMe, setRememberMe] = useState(false);
-
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
-
   return (
     <SignInLayout image={bgImage}>
       <Card>
@@ -36,10 +33,11 @@ function Basic() {
           mx={2}
           mt={-9}
           p={1}
-          mb={1}
+          mb={0}
           textAlign="center"
         >
-          <img src={logo} width="70" height="96"/>
+          {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+          <img src={logo} width="70" height="71" alt="Image" />
           <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
             Login to your account
           </MDTypography>
@@ -67,8 +65,6 @@ function Basic() {
                 </MDTypography>
               </MDTypography>
             </MDBox>
-
-
 
             <MDBox mt={4} mb={1}>
               <MDButton variant="gradient" color="info" fullWidth>

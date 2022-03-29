@@ -7,6 +7,7 @@ export default styled(Button)(({ theme, ownerState }) => {
   const { color, variant, size, circular, iconOnly, darkMode } = ownerState;
 
   const { white, text, transparent, gradients, grey } = palette;
+  text.main = undefined;
   const { boxShadow, linearGradient, pxToRem, rgba } = functions;
   const { borderRadius } = borders;
   const { colored } = boxShadows;
@@ -45,6 +46,7 @@ export default styled(Button)(({ theme, ownerState }) => {
     if (!darkMode && (color === "white" || color === "light" || !palette[color])) {
       colorValue = text.main;
     } else if (darkMode && (color === "white" || color === "light" || !palette[color])) {
+      // eslint-disable-next-line prefer-destructuring
       colorValue = grey[600];
     }
 

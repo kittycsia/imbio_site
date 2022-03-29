@@ -132,26 +132,8 @@ function DataTable({
 
   return (
     <TableContainer sx={{ boxShadow: "none" }}>
-      {entriesPerPage || canSearch ? (
+      {canSearch ? (
         <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-          {entriesPerPage && (
-            <MDBox display="flex" alignItems="center">
-              <Autocomplete
-                disableClearable
-                value={pageSize.toString()}
-                options={entries}
-                onChange={(event, newValue) => {
-                  setEntriesPerPage(parseInt(newValue, 10));
-                }}
-                size="small"
-                sx={{ width: "5rem" }}
-                renderInput={(params) => <MDInput {...params} />}
-              />
-              <MDTypography variant="caption" color="secondary">
-                &nbsp;&nbsp;entries per page
-              </MDTypography>
-            </MDBox>
-          )}
           {canSearch && (
             <MDBox width="12rem" ml="auto">
               <MDInput
@@ -212,6 +194,24 @@ function DataTable({
         alignItems={{ xs: "flex-start", sm: "center" }}
         p={!showTotalEntries && pageOptions.length === 1 ? 0 : 3}
       >
+        {entriesPerPage && (
+          <MDBox display="flex" alignItems="center">
+            <Autocomplete
+              disableClearable
+              value={pageSize.toString()}
+              options={entries}
+              onChange={(event, newValue) => {
+                setEntriesPerPage(parseInt(newValue, 10));
+              }}
+              size="small"
+              sx={{ width: "5rem" }}
+              renderInput={(params) => <MDInput {...params} />}
+            />
+            <MDTypography variant="caption" color="secondary">
+              &nbsp;&nbsp;entries per page
+            </MDTypography>
+          </MDBox>
+        )}
         {showTotalEntries && (
           <MDBox mb={{ xs: 3, sm: 0 }}>
             <MDTypography variant="button" color="secondary" fontWeight="regular">
@@ -222,7 +222,7 @@ function DataTable({
         {pageOptions.length > 1 && (
           <MDPagination
             variant={pagination.variant ? pagination.variant : "gradient"}
-            color={pagination.color ? pagination.color : "info"}
+            color={pagination.color ? pagination.color : "secondary"}
           >
             {canPreviousPage && (
               <MDPagination item onClick={() => previousPage()}>
@@ -257,7 +257,7 @@ DataTable.defaultProps = {
   entriesPerPage: { defaultValue: 10, entries: [5, 10, 15, 20, 25] },
   canSearch: false,
   showTotalEntries: true,
-  pagination: { variant: "gradient", color: "info" },
+  pagination: { variant: "gradient", color: "success" },
   isSorted: true,
   noEndBorder: false,
 };
