@@ -30,7 +30,7 @@ function Overview() {
               <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               <ProfileInfoCard
                 title="profile information"
-                description="You can edit your profile here."
+                description="Describe yourself here."
                 info={{
                   fullName: "Gipsz Jakab",
                   mobile: "(20) 123 1234 123",
@@ -40,7 +40,7 @@ function Overview() {
                 action={{ route: "", tooltip: "Edit Profile" }}
                 shadow={false}
               />
-              <Divider orientation="vertical" sx={{ mx: 0 }} />
+              <Divider orientation="vertical" sx={{ mx: 10 }} />
             </Grid>
           </Grid>
         </MDBox>

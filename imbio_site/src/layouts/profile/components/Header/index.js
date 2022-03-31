@@ -63,7 +63,7 @@ function Header({ children }) {
       <Card
         sx={{
           position: "relative",
-          mt: -8,
+          mt: -10,
           mx: 3,
           py: 2,
           px: 2,
