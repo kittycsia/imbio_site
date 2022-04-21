@@ -32,7 +32,7 @@ function Basic() {
           coloredShadow="info"
           mx={2}
           mt={-9}
-          p={1}
+          p={3.5}
           mb={0}
           textAlign="center"
         >

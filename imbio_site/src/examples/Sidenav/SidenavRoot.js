@@ -44,6 +44,7 @@ export default styled(Drawer)(({ theme, ownerState }) => {
   });
 
   // styles for the sidenav when miniSidenav={true}
+  // styles for the sidenav when miniSidenav={true}
   const drawerCloseStyles = () => ({
     background: backgroundValue,
     transform: `translateX(${pxToRem(-320)})`,

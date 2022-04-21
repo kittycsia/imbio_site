@@ -136,7 +136,8 @@ function DashboardNavbar({ absolute, light, isMini }) {
               <IconButton
                 size="large"
                 disableRipple
-                color="inherit"
+                color="info"
+                variant="gradient"
                 sx={navbarIconButton}
                 onClick={handleConfiguratorOpen}
               >

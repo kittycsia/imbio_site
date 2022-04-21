@@ -19,28 +19,27 @@ function Overview() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox mb={2} />
+      <MDBox mb={3} />
       <Header>
-        <MDBox mt={5} mb={3}>
-          <Grid container spacing={1}>
+        <MDBox mt={3} mb={4}>
+          <Grid container spacing={0}>
             <Grid item xs={12} md={6} xl={4}>
               <PlatformSettings />
             </Grid>
             <Grid item xs={12} md={6} xl={4} sx={{ display: "flex" }}>
-              <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
+              <Divider orientation="vertical" sx={{ ml: -12, mr: 12 }} />
               <ProfileInfoCard
                 title="profile information"
-                description="Describe yourself here."
                 info={{
                   fullName: "Gipsz Jakab",
-                  mobile: "(20) 123 1234 123",
+                  mobile: "(30) 123 4567",
                   email: "gipszjakab@mail.com",
                   location: "Hungary",
                 }}
                 action={{ route: "", tooltip: "Edit Profile" }}
                 shadow={false}
               />
-              <Divider orientation="vertical" sx={{ mx: 10 }} />
+              <Divider orientation="vertical" sx={{ mx: 12 }} />
             </Grid>
           </Grid>
         </MDBox>

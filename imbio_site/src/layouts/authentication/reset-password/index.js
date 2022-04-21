@@ -25,7 +25,7 @@ function Cover() {
           coloredShadow="success"
           mx={2}
           mt={-9}
-          py={1}
+          p={3.5}
           mb={0}
           textAlign="center"
         >
