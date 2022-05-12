@@ -28,7 +28,7 @@ import { useMaterialUIController, setMiniSidenav } from "context";
 // Images
 import brandWhite from "assets/images/logo-ct.png";
 import brandDark from "assets/images/logo-ct-dark.png";
-import FloatingActionButtons from "examples/Footer/Fab-button";
+// import FloatingActionButtons from "examples/Footer/Fab-button";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -84,52 +84,44 @@ export default function App() {
       return null;
     });
 
-  const configsButton = <FloatingActionButtons />;
+  // const configsButton = <FloatingActionButtons />;
 
   return direction === "rtl" ? (
     <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
       <CssBaseline />
       {layout === "dashboard" && (
-        <>
-          <Sidenav
-            color={sidenavColor}
-            brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-            brandName=""
-            routes={routes}
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-          />
-          <Configurator />
-          {configsButton}
-        </>
+        <Sidenav
+          color={sidenavColor}
+          brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
+          brandName=""
+          routes={routes}
+          onMouseEnter={handleOnMouseEnter}
+          onMouseLeave={handleOnMouseLeave}
+        />
       )}
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/tables" />} />
+        <Route path="*" element={<Navigate to="/jobs" />} />
       </Routes>
     </ThemeProvider>
   ) : (
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
       {layout === "dashboard" && (
-        <>
-          <Sidenav
-            color={sidenavColor}
-            brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-            brandName=""
-            routes={routes}
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-          />
-          <Configurator />
-          {configsButton}
-        </>
+        <Sidenav
+          color={sidenavColor}
+          brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
+          brandName=""
+          routes={routes}
+          onMouseEnter={handleOnMouseEnter}
+          onMouseLeave={handleOnMouseLeave}
+        />
       )}
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/tables" />} />
+        <Route path="*" element={<Navigate to="/jobs" />} />
       </Routes>
     </ThemeProvider>
   );

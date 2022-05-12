@@ -91,18 +91,25 @@ function Header({ children }) {
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={8} md={3} lg={2} sx={{ ml: "auto" }}>
+          <Grid item xs={8} md={3} lg={2.5} sx={{ ml: "auto" }}>
             <AppBar position="static">
               <Tabs orientation={tabsOrientation} value={tabValue} onChange={handleSetTabValue}>
                 <Tab
                   label="English"
                   icon={
                     <Icon fontSize="small" sx={{ mt: -0.25 }}>
+                      home
+                    </Icon>
+                  }
+                />
+                <Tab
+                  label="French"
+                  icon={
+                    <Icon fontSize="small" sx={{ mt: -0.25 }}>
                       language
                     </Icon>
                   }
                 />
-                <Tab label="French" />
               </Tabs>
             </AppBar>
           </Grid>

@@ -4,19 +4,41 @@ import Card from "@mui/material/Card";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
+import IconLabelButtons from "examples/Items/Buttons/Buttons";
 
 // Data
 import jobTableData from "layouts/tables/data/jobTableData";
+import Stack from "@mui/material/Stack";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import ViewIcon from "@mui/icons-material/ViewCarousel";
+import FilterIcon from "@mui/icons-material/FilterList";
+import CalendarIcon from "@mui/icons-material/CalendarMonth";
 
 function Tables() {
   const { columns, rows } = jobTableData();
+  const damn = (
+    <Stack direction="row" alignItems="right" justifyContent="flex-end" paddingRight={2}>
+      <IconButton aria-label="Search" color="secondary" variant="gradient">
+        <SearchIcon fontSize="medium" />
+      </IconButton>
+      <IconButton aria-label="View columns" color="secondary" variant="gradient">
+        <ViewIcon fontSize="medium" />
+      </IconButton>
+      <IconButton aria-label="Filter tables" color="secondary" variant="gradient">
+        <FilterIcon fontSize="medium" />
+      </IconButton>
+      <IconButton aria-label="Data filter" color="secondary" variant="gradient">
+        <CalendarIcon fontSize="medium" />
+      </IconButton>
+    </Stack>
+  );
 
   return (
     <DashboardLayout>
@@ -35,17 +57,17 @@ function Tables() {
                 borderRadius="lg"
                 coloredShadow="info"
               >
-                <MDTypography variant="h6" color="white">
-                  Job List
-                </MDTypography>
+                <IconLabelButtons />
               </MDBox>
               <MDBox pt={3}>
+                {damn}
                 <DataTable
                   table={{ columns, rows }}
-                  isSorted={false}
+                  isSorted
                   entriesPerPage
                   showTotalEntries
                   noEndBorder
+                  // canSearch
                 />
               </MDBox>
             </Card>

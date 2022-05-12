@@ -18,7 +18,7 @@ function PlatformSettings() {
   return (
     <Card sx={{ boxShadow: "none" }}>
       <MDBox p={2}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize" >
           Enabled Notifications
         </MDTypography>
       </MDBox>
@@ -38,7 +38,11 @@ function PlatformSettings() {
         </MDBox>
         <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
           <MDBox mt={0.5}>
-            <Switch checked={answersPost} onChange={() => setAnswersPost(!answersPost)} />
+            <Switch
+              checked={answersPost}
+              onChange={() => setAnswersPost(!answersPost)}
+              color="primary"
+            />
           </MDBox>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">

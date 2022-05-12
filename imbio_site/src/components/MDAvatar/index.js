@@ -33,7 +33,7 @@ MDAvatar.propTypes = {
   ]),
   size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl", "xxl"]),
   shadow: PropTypes.oneOf(["none", "xs", "sm", "md", "lg", "xl", "xxl", "inset"]),
-  variant: PropTypes.oneOf(["square", "rounded"]),
+  variant: PropTypes.oneOf(["square"]),
 };
 
 export default MDAvatar;

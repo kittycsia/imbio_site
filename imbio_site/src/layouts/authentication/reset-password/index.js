@@ -41,7 +41,7 @@ function Cover() {
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
             <MDBox mb={4}>
-              <MDInput type="email" label="Email" variant="standard" fullWidth />
+              <MDInput color="success" type="email" label="Email" variant="standard" fullWidth />
             </MDBox>
 
             <MDBox mt={6} mb={1}>

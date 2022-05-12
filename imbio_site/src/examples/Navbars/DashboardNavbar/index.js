@@ -20,7 +20,6 @@ import {
   navbar,
   navbarContainer,
   navbarRow,
-  navbarIconButton,
   navbarMobileMenu,
 } from "examples/Navbars/DashboardNavbar/styles";
 
@@ -69,19 +68,6 @@ function DashboardNavbar({ absolute, light, isMini }) {
   const handleMiniSidenav = () => setMiniSidenav(dispatch, !miniSidenav);
   const handleConfiguratorOpen = () => setOpenConfigurator(dispatch, !openConfigurator);
 
-  // Styles for the navbar icons
-  const iconsStyle = ({ palette: { dark, white, text }, functions: { rgba } }) => ({
-    color: () => {
-      let colorValue = light || darkMode ? white.main : dark.main;
-
-      if (transparentNavbar && !light) {
-        colorValue = darkMode ? rgba(text.main, 0.6) : text.main;
-      }
-
-      return colorValue;
-    },
-  });
-
   return (
     <AppBar
       position={absolute ? "absolute" : navbarType}
@@ -96,36 +82,43 @@ function DashboardNavbar({ absolute, light, isMini }) {
           <MDBox sx={(theme) => navbarRow(theme, { isMini })}>
             <MDBox color={light ? "white" : "inherit"}>
               <IconButton
-                size="small"
                 disableRipple
                 color="inherit"
                 sx={navbarMobileMenu}
                 onClick={handleMiniSidenav}
               >
-                <Icon sx={iconsStyle} fontSize="medium">
-                  {miniSidenav ? "menu_open" : "menu"}
-                </Icon>
+                <Icon fontSize="medium">{miniSidenav ? "menu_open" : "menu"}</Icon>
               </IconButton>
 
-              <IconButton sx={navbarIconButton} size="medium" disableRipple>
-                <Icon sx={iconsStyle}>support_agent</Icon>
-                <MDTypography
-                  component="a"
-                  href="https://www.imbio.com/support/"
-                  variant="caption"
-                  color="dark"
-                  fontWeight="medium"
-                >
-                  SUPPORT
-                </MDTypography>
-              </IconButton>
-
-              <IconButton sx={navbarIconButton} size="medium" disableRipple>
-                <Icon sx={iconsStyle}>assignment</Icon>
+              <IconButton
+                size="large"
+                href="https://www.imbio.com/support/"
+                disableRipple
+                color="dark"
+              >
+                <Icon>support_agent</Icon>
               </IconButton>
               <MDTypography
                 component="a"
-                href="#"
+                href="https://www.imbio.com/support/"
+                variant="caption"
+                color="dark"
+                fontWeight="medium"
+              >
+                SUPPORT
+              </MDTypography>
+
+              <IconButton
+                size="large"
+                href="https://www.imbio.com/privacy-policy/"
+                disableRipple
+                color="dark"
+              >
+                <Icon>assignment</Icon>
+              </IconButton>
+              <MDTypography
+                component="a"
+                href="https://www.imbio.com/privacy-policy/"
                 variant="caption"
                 color="dark"
                 fontWeight="medium"
@@ -136,19 +129,20 @@ function DashboardNavbar({ absolute, light, isMini }) {
               <IconButton
                 size="large"
                 disableRipple
-                color="info"
+                color="dark"
                 variant="gradient"
-                sx={navbarIconButton}
+                href="/profiles"
                 onClick={handleConfiguratorOpen}
               >
-                <Icon sx={iconsStyle}>account_circle</Icon>
+                <Icon>account_circle</Icon>
               </IconButton>
               <MDTypography
                 component="a"
-                href="#"
+                href="/profiles"
                 variant="caption"
                 color="dark"
                 fontWeight="medium"
+                onClick={handleConfiguratorOpen}
               >
                 PROFILE
               </MDTypography>

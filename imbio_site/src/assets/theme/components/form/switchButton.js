@@ -18,26 +18,26 @@ const switchButton = {
 
   styleOverrides: {
     switchBase: {
-      color: gradients.dark.main,
+      color: gradients.info.main,
 
       "&:hover": {
         backgroundColor: transparent.main,
       },
 
       "&.Mui-checked": {
-        color: gradients.dark.main,
+        color: gradients.info.main,
 
         "&:hover": {
           backgroundColor: transparent.main,
         },
 
         "& .MuiSwitch-thumb": {
-          borderColor: `${gradients.dark.main} !important`,
+          borderColor: `${gradients.info.main} !important`,
         },
 
         "& + .MuiSwitch-track": {
-          backgroundColor: `${gradients.dark.main} !important`,
-          borderColor: `${gradients.dark.main} !important`,
+          backgroundColor: `${gradients.info.main} !important`,
+          borderColor: `${gradients.info.main} !important`,
           opacity: 1,
         },
       },

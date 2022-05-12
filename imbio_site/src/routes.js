@@ -1,5 +1,6 @@
 // Layouts
-import Dashboard from "layouts/dashboard";
+import Algorithms from "layouts/algorithms";
+import Roles from "layouts/roles";
 import Tables from "layouts/tables";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
@@ -13,34 +14,34 @@ const routes = [
   {
     type: "collapse",
     name: "Jobs",
-    key: "tables",
+    key: "jobs",
     icon: <Icon fontSize="small">fact_check</Icon>,
-    route: "/tables",
+    route: "/jobs",
     component: <Tables />,
   },
   {
     type: "collapse",
     name: "Algorithms",
-    key: "dashboard",
+    key: "algorithms",
     icon: <Icon fontSize="small">settings_suggest</Icon>,
-    route: "/dashboard",
-    component: <Dashboard />,
+    route: "/algorithms",
+    component: <Algorithms />,
   },
   {
     type: "collapse",
     name: "Profiles",
-    key: "profile",
+    key: "profiles",
     icon: <Icon fontSize="small">engineering</Icon>,
-    route: "/profile",
+    route: "/profiles",
     component: <Profile />,
   },
   {
     type: "collapse",
     name: "Roles",
-    key: "dashboard",
+    key: "roles",
     icon: <Icon fontSize="small">manage_accounts</Icon>,
-    route: "/dashboard",
-    component: <Dashboard />,
+    route: "/roles",
+    component: <Roles />,
   },
   {
     type: "collapse",
@@ -61,9 +62,9 @@ const routes = [
   {
     type: "collapse",
     name: "Theme",
-    key: "notifications",
+    key: "theme",
     icon: <Icon fontSize="small">palette</Icon>,
-    route: "/notifications",
+    route: "/theme",
     component: <Notifications />,
   },
 ];
