@@ -68,7 +68,7 @@ function Basic() {
 
             <MDBox mt={4} mb={1}>
               <MDButton variant="gradient" color="info" fullWidth>
-                sign in
+                Login
               </MDButton>
             </MDBox>
 

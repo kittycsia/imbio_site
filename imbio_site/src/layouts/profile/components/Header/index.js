@@ -6,15 +6,11 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 
 // React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
-import Icon from "@mui/material/Icon";
 
 // Base Styles
 import breakpoints from "assets/theme/base/breakpoints";
@@ -25,7 +21,6 @@ import backgroundImage from "assets/images/bg-profile.jpeg";
 
 function Header({ children }) {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
-  const [tabValue, setTabValue] = useState(0);
 
   useEffect(() => {
     // A function that sets the orientation state of the tabs.
@@ -46,9 +41,6 @@ function Header({ children }) {
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleTabsOrientation);
   }, [tabsOrientation]);
-
-  const handleSetTabValue = (event, newValue) => setTabValue(newValue);
-
   return (
     <MDBox position="relative" mb={5}>
       <MDBox
@@ -90,28 +82,6 @@ function Header({ children }) {
                 XY
               </MDTypography>
             </MDBox>
-          </Grid>
-          <Grid item xs={8} md={3} lg={2.5} sx={{ ml: "auto" }}>
-            <AppBar position="static">
-              <Tabs orientation={tabsOrientation} value={tabValue} onChange={handleSetTabValue}>
-                <Tab
-                  label="English"
-                  icon={
-                    <Icon fontSize="small" sx={{ mt: -0.25 }}>
-                      home
-                    </Icon>
-                  }
-                />
-                <Tab
-                  label="French"
-                  icon={
-                    <Icon fontSize="small" sx={{ mt: -0.25 }}>
-                      language
-                    </Icon>
-                  }
-                />
-              </Tabs>
-            </AppBar>
           </Grid>
         </Grid>
         {children}

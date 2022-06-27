@@ -104,6 +104,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 variant="caption"
                 color="dark"
                 fontWeight="medium"
+                fontSize="10pt"
               >
                 SUPPORT
               </MDTypography>
@@ -122,6 +123,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 variant="caption"
                 color="dark"
                 fontWeight="medium"
+                fontSize="10pt"
               >
                 DOCS
               </MDTypography>
@@ -131,17 +133,18 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 disableRipple
                 color="dark"
                 variant="gradient"
-                href="/profiles"
+                href="/profile"
                 onClick={handleConfiguratorOpen}
               >
                 <Icon>account_circle</Icon>
               </IconButton>
               <MDTypography
                 component="a"
-                href="/profiles"
+                href="/profile"
                 variant="caption"
                 color="dark"
                 fontWeight="medium"
+                fontSize="10pt"
                 onClick={handleConfiguratorOpen}
               >
                 PROFILE

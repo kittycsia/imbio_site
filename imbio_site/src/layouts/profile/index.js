@@ -10,9 +10,10 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 
 // Overview page components
-import Header from "layouts/profile/components/Header";
+import Header from "layouts/profile/components/Header/index";
 import { useState } from "react";
 import { Switch } from "@material-ui/core";
+import SplitButton from "layouts/profile/components/Header/Language";
 import SeparatorCard from "../../examples/Cards/SeparatorCards/index";
 import MDTypography from "../../components/MDTypography";
 import MDInput from "../../components/MDInput";
@@ -32,6 +33,90 @@ function Overview() {
       <Header />
       <MDBox>
         <Grid container spacing={3} marginLeft={-0.1}>
+          <Grid item xs={12} md={6} lg={3.95}>
+            <MDBox mb={3}>
+              <SeparatorCard
+                icon="person"
+                count="Personal information"
+                title="Your name and your e-mail you have signed in with."
+                content={
+                  <MDBox pt={1} pb={2} px={2} lineHeight={1.5}>
+                    <MDTypography
+                      variant="caption"
+                      fontWeight="bold"
+                      color="text"
+                      textTransform="uppercase"
+                    >
+                      Name
+                    </MDTypography>
+                    <MDBox mb={2}>
+                      <MDInput type="name" label="Gipsz Jakab" disabled fullWidth />
+                    </MDBox>
+                    <MDTypography
+                      variant="caption"
+                      fontWeight="bold"
+                      color="text"
+                      textTransform="uppercase"
+                    >
+                      E-mail
+                    </MDTypography>
+                    <MDBox mb={2}>
+                      <MDInput type="email" label="gipsz.jakab@gmail.com" disabled fullWidth />
+                    </MDBox>
+                    <MDBox mb={2} pt={2}>
+                      <SplitButton />
+                    </MDBox>
+                  </MDBox>
+                }
+              />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3.95}>
+            <MDBox mb={2}>
+              <SeparatorCard
+                icon="lock"
+                count="Password"
+                title="Review compliance rules below the password fields."
+                content={
+                  <MDBox pt={1} pb={2} px={2} lineHeight={1.5}>
+                    <MDTypography
+                      variant="caption"
+                      fontWeight="bold"
+                      color="text"
+                      textTransform="uppercase"
+                    >
+                      Your current password
+                    </MDTypography>
+                    <MDBox mb={2.5}>
+                      <MDInput type="password" label="Old Password" fullWidth required />
+                    </MDBox>
+                    <MDTypography
+                      variant="caption"
+                      fontWeight="bold"
+                      color="text"
+                      textTransform="uppercase"
+                    >
+                      New password
+                    </MDTypography>
+                    <MDBox mb={2}>
+                      <MDInput type="password" label="New Password" fullWidth required />
+                    </MDBox>
+                    <MDTypography
+                      variant="caption"
+                      fontWeight="bold"
+                      color="text"
+                      textTransform="uppercase"
+                    >
+                      New password again
+                    </MDTypography>
+                    <MDBox mb={2}>
+                      <MDInput type="password" label="New Password" fullWidth required />
+                    </MDBox>
+                  </MDBox>
+                }
+              />
+            </MDBox>
+          </Grid>
           <Grid item xs={12} md={6} lg={3.95}>
             <MDBox mb={3}>
               <SeparatorCard
@@ -133,98 +218,15 @@ function Overview() {
               />
             </MDBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={3.95}>
-            <MDBox mb={3}>
-              <SeparatorCard
-                icon="person"
-                count="Your profile"
-                title="Your name and your e-mail you have signed in with."
-                content={
-                  <MDBox pt={1} pb={2} px={2} lineHeight={1.5}>
-                    <MDTypography
-                      variant="caption"
-                      fontWeight="bold"
-                      color="text"
-                      textTransform="uppercase"
-                    >
-                      Name
-                    </MDTypography>
-                    <MDBox mb={2}>
-                      <MDInput type="name" label="Gipsz Jakab" disabled fullWidth />
-                    </MDBox>
-                    <MDTypography
-                      variant="caption"
-                      fontWeight="bold"
-                      color="text"
-                      textTransform="uppercase"
-                    >
-                      E-mail
-                    </MDTypography>
-                    <MDBox mb={2}>
-                      <MDInput type="email" label="gipsz.jakab@gmail.com" disabled fullWidth />
-                    </MDBox>
-                  </MDBox>
-                }
-              />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3.95}>
-            <MDBox mb={2}>
-              <SeparatorCard
-                icon="lock"
-                count="Password"
-                title="Review compliance rules below the password fields."
-                content={
-                  <MDBox pt={1} pb={2} px={2} lineHeight={1.5}>
-                    <MDTypography
-                      variant="caption"
-                      fontWeight="bold"
-                      color="text"
-                      textTransform="uppercase"
-                    >
-                      Your current password
-                    </MDTypography>
-                    <MDBox mb={2.5}>
-                      <MDInput type="password" label="Old Password" fullWidth required />
-                    </MDBox>
-                    <MDTypography
-                      variant="caption"
-                      fontWeight="bold"
-                      color="text"
-                      textTransform="uppercase"
-                    >
-                      New password
-                    </MDTypography>
-                    <MDBox mb={2}>
-                      <MDInput type="password" label="New Password" fullWidth required />
-                    </MDBox>
-                    <MDTypography
-                      variant="caption"
-                      fontWeight="bold"
-                      color="text"
-                      textTransform="uppercase"
-                    >
-                      New password again
-                    </MDTypography>
-                    <MDBox mb={2}>
-                      <MDInput type="password" label="New Password" fullWidth required />
-                    </MDBox>
-                    <MDBox mb={2} display="flex" justifyContent="flex-end">
-                      <MDButton type="submit" variant="gradient" color="success">
-                        Submit
-                      </MDButton>
-                    </MDBox>
-                  </MDBox>
-                }
-              />
-            </MDBox>
-          </Grid>
         </Grid>
       </MDBox>
-
+      <MDBox display="flex" justifyContent="flex-end" marginRight={3}>
+        <MDButton color="success" variant="gradient">
+          Save
+        </MDButton>
+      </MDBox>
       <Footer />
     </DashboardLayout>
   );
 }
-
 export default Overview;

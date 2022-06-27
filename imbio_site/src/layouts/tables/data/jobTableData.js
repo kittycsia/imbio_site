@@ -56,8 +56,8 @@ export default function data() {
   );
 
   const Algorithm = ({ image, name, description }) => (
-    <MDBox selfAlign="left" display="flex" lineHeight={3}>
-      <MDAvatar src={image} variant="square" />
+    <MDBox display="flex" lineHeight={3}>
+      <MDAvatar src={image} />
       <MDBox ml={2} lineHeight={1}>
         <MDTypography display="block" variant="button" fontWeight="medium">
           {name}
@@ -71,11 +71,11 @@ export default function data() {
     columns: [
       { Header: "Job name", accessor: "jname", align: "left" },
       { Header: "Patient name", accessor: "pname", align: "left" },
-      { Header: "Group", accessor: "group", align: "center" },
-      { Header: "Status", accessor: "status", align: "center" },
-      { Header: "Initial upload (UTC)", accessor: "upload", align: "center" },
-      { Header: "Algorithm", accessor: "algo", align: "center" },
-      { Header: "Actions", accessor: "action", align: "center", disableSortBy: true },
+      { Header: "Group", accessor: "group", align: "left" },
+      { Header: "Status", accessor: "status", align: "left" },
+      { Header: "Initial upload (UTC)", accessor: "upload", align: "left" },
+      { Header: "Algorithm", accessor: "algo", align: "left" },
+      { Header: "Actions", accessor: "action", align: "left", disableSortBy: true },
     ],
 
     rows: [

@@ -10,6 +10,10 @@ import ResetPassword from "layouts/authentication/reset-password";
 // @mui icons
 import Icon from "@mui/material/Icon";
 
+function Profiles() {
+  return null;
+}
+
 const routes = [
   {
     type: "collapse",
@@ -33,7 +37,7 @@ const routes = [
     key: "profiles",
     icon: <Icon fontSize="small">engineering</Icon>,
     route: "/profiles",
-    component: <Profile />,
+    component: <Profiles />,
   },
   {
     type: "collapse",
@@ -66,6 +70,14 @@ const routes = [
     icon: <Icon fontSize="small">palette</Icon>,
     route: "/theme",
     component: <Notifications />,
+  },
+  {
+    type: "",
+    name: "",
+    key: "",
+    icon: "",
+    route: "/profile",
+    component: <Profile />,
   },
 ];
 

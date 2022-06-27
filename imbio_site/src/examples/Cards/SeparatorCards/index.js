@@ -13,7 +13,7 @@ import MDTypography from "components/MDTypography";
 // eslint-disable-next-line react/prop-types
 function SeparatorCard({ color, count, title, content, icon }) {
   return (
-    <Card sx={{ maxWidth: 550, minHeight: 445 }}>
+    <Card sx={{ maxWidth: 475, minHeight: 420 }}>
       <MDBox display="flex" justifyContent="space-between" pt={1} px={2}>
         <MDBox
           variant="gradient"
